@@ -49,14 +49,16 @@
 
 
 ## 支持的设备
-|           支持的设备        |         固件类别         |        Action         |              下载页          |
-| :------------------------: | :---------------------: | :-------------------: | :--------------------------: |    
-|             x86_64                    |  [LEDE](https://github.com/coolsnowwolf/lede) |[🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/x86_64.yml) |  [✔](https://github.com/bigbugcc/OpenWrts/releases) |
-|             树莓派 3B/3B+             | [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/RaspberryPi3.yml) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
-|             树莓派 4B             |  [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/RaspberryPi4.yml) |  [✔](https://github.com/bigbugcc/OpenWrts/releases) |
-|             NanoPi R2S             |  [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/R2S.yml) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
-|             NanoPi R4S             |  [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/R4S.yml) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
-|             Orange Pi R1 Plus             |  [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/OrangePiR1.yml) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
+|           支持的设备        |         固类别         |        Action         |            状态          |              下载页          |
+| :------------------------: | :---------------------: | :-------------------: | :-------------------: | :--------------------------: |
+|             x86_64                    |  [LEDE](https://github.com/coolsnowwolf/lede) |[🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/x86_64.yml) | ![x86_64](https://github.com/bigbugcc/openwrts/actions/workflows/x86_64.yml/badge.svg) |  [✔](https://github.com/bigbugcc/OpenWrts/releases) |
+| x86_64Lite | [LEDE](https://github.com/coolsnowwolf/lede) |[🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/x86_64Lite.yml) | ![x86_64Lite](https://github.com/bigbugcc/openwrts/actions/workflows/x86_64Lite.yml/badge.svg) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
+|             树莓派 3B/3B+             | [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/RaspberryPi3.yml) | ![RaspberryPi3](https://github.com/bigbugcc/openwrts/actions/workflows/RaspberryPi3.yml/badge.svg) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
+|             树莓派 4B             |  [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/RaspberryPi4.yml) | ![RaspberryPi4](https://github.com/bigbugcc/openwrts/actions/workflows/RaspberryPi4.yml/badge.svg) |  [✔](https://github.com/bigbugcc/OpenWrts/releases) |
+|             NanoPi R2S             |  [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/R2S.yml) | ![R2S](https://github.com/bigbugcc/openwrts/actions/workflows/R2S.yml/badge.svg) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
+|             NanoPi R4S             |  [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/R4S.yml) | ![R4S](https://github.com/bigbugcc/openwrts/actions/workflows/R4S.yml/badge.svg) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
+|             Orange Pi R1 Plus             |  [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/OrangePiR1.yml) | ![OrangePiR1](https://github.com/bigbugcc/openwrts/actions/workflows/OrangePiR1.yml/badge.svg) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
+| Orange Pi R1 Plus LTS | [LEDE](https://github.com/coolsnowwolf/lede) | [🍕](https://github.com/bigbugcc/OpenWrts/actions/workflows/OrangePiR1LTS.yml) | ![OrangePiR1LTS](https://github.com/bigbugcc/openwrts/actions/workflows/OrangePiR1LTS.yml/badge.svg) | [✔](https://github.com/bigbugcc/OpenWrts/releases) |
 
 <br>
 
@@ -64,15 +66,17 @@
 - 路由器地址: `192.168.10.1`   
 - 默认用户名: `root`   
 - 默认密码  : `password`
- 
 
 <br>
 
 ## 固件特性
 ✨ 自带常用的插件   
 ✨ 集成所有openwrt的USB驱动   
-✨ 集成Python3.x环境   
-✨ 全新的 [Them](https://github.com/jerrykuku/luci-theme-argon)
+✨ 集成Python3.x(带pip)环境   
+✨ 集成Docker-CE   
+✨ 集成Node.js(14.xLTS 带npm、yarn)   
+✨ 全新的 [Them](https://github.com/jerrykuku/luci-theme-argon)  
+✨ x86_64 vmdk固件集成vm-tools   
 
 <br>
 
@@ -81,6 +85,7 @@
 - PassWall / SSR Plus
 - AdGuard Home
 - Mentohust
+- luci-app-vssr   
 - luci-adbyby-plus
 - luci-app-unblockmusic
 - luci-app-ddns
@@ -96,7 +101,13 @@
 - luci-app-n2n
 - luci-app-syncdial (多播插件)
 - luci-app-turboacc
-- luci-app-kms   
+- luci-app-kms  
+- luci-app-docker   
+- luci-app-serverchan   
+- luci-app-control-timewol (定时wol唤醒)   
+- luci-app-aliyundrive-webdav (阿里云盘)  
+- luci-app-filebrowser   
+- luci-app-nfs   
 ......
 
 <br>
@@ -129,7 +140,7 @@ filetree
 2. 按需修改 ```configure.sh``` 和 ```package.sh``` 文件
 3. 上传你自己的 ```xx.config``` 配置文件到configs目录 
 4. 添加或修改自己的``````xx.yml``````文件 
-5. 最后根据个人喜好修改 ```update-checker.yml``` (触发自动编译)
+5. 最后根据个人喜好修改 ```update-checker.yml``` 需自行添加 ```Actions secrets``` (触发自动编译)
 
 ### 注意事项：
 📌 修改默认系统参数 👉 ```configure.sh```   
@@ -154,11 +165,16 @@ filetree
 
 <br>
 
+
+
+
 ## 项目支持
 - [P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)
 - [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)
 - [luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon)
 
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/bigbugcc/OpenWrts.svg)](https://starchart.cc/bigbugcc/OpenWrts)
 
 <!-- links -->
 [your-project-path]:https://github.com/bigbugcc/OpenWrts/
@@ -172,5 +188,3 @@ filetree
 [issues-url]: https://img.shields.io/github/issues/bigbugcc/OpenWrts
 [license-shield]: https://img.shields.io/github/license/bigbugcc/OpenWrts?style=flat-square
 [license-url]: https://github.com/bigbugcc/OpenWrts/blob/master/LICENSE
-
-
