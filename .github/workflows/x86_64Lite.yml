@@ -14,6 +14,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
+  EXTERNAL_FILE: configs/External_Lite.config
   CONFIG_FILE: configs/x86_64Lite.config
   SYS_CONF_SH: configure.sh
   PACKS: package.sh
@@ -71,6 +72,13 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$PACKS
 
+    - name: Modify configuration
+      run: |
+        cat $EXTERNAL_FILE >> openwrt/.config
+        cd openwrt && make defconfig
+        sed -i '/CONFIG_DEFAULT_luci/'d .config
+        cat .config
+
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
@@ -82,8 +90,7 @@ jobs:
       id: package
       run: |
         cd openwrt
-        make defconfig
-        make download -j8
+        make download -j$(nproc)
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
@@ -92,7 +99,7 @@ jobs:
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j2 || make -j1 V=s
+        make -j$(nproc) V=s || make -j4 V=s
         echo "::set-output name=status::success"
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
